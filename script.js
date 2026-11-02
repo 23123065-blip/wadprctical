@@ -1,4 +1,4 @@
-```javascript
+
 function showMessage() {
     alert("Welcome to PVG College Student Portal!");
 }
