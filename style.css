@@ -1,26 +1,142 @@
-```javascript
-function showMessage() {
-    alert("Welcome to PVG College Student Portal!");
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-function searchNotices() {
-    let input = document.getElementById("search");
-    let filter = input.value.toLowerCase();
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
 
-    let list = document.getElementById("noticeList");
-    let items = list.getElementsByTagName("li");
+header {
+    background-color: #12304a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
 
-    for (let i = 0; i < items.length; i++) {
-        let text = items[i].textContent.toLowerCase();
+header h1 {
+    font-size: 32px;
+}
 
-        if (text.includes(filter)) {
-            items[i].style.display = "";
-        } else {
-            items[i].style.display = "none";
-        }
+nav {
+    background-color: #1769aa;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #12304a;
+    border-radius: 5px;
+}
+
+.hero {
+    background-color: #dceeff;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.hero h2 {
+    color: #12304a;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #1769aa;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #12304a;
+}
+
+section {
+    padding: 35px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #12304a;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    width: 240px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #00000015;
+}
+
+.card h3 {
+    color: #1769aa;
+    margin-bottom: 10px;
+}
+
+#search {
+    width: 80%;
+    max-width: 450px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+#noticeList {
+    list-style-position: inside;
+}
+
+#noticeList li {
+    background-color: white;
+    margin: 8px auto;
+    padding: 12px;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #12304a;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 24px;
     }
 }
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
 ```
